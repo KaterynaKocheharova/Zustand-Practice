@@ -1,10 +1,11 @@
+import classNames from "classnames";
 import css from "./Task.module.css";
 
 type TaskProps = {
   title: string;
 };
 
-const STATUS = "PANNED";
+const STATUS = "DONE";
 
 const Task = ({ title }: TaskProps) => {
   return (
@@ -12,7 +13,7 @@ const Task = ({ title }: TaskProps) => {
       <p>{title}</p>
       <div className={css["bottom-wrapper"]}>
         <div></div>
-        <div className={css.status}>{STATUS}</div>
+        <div className={classNames(css.status, css[STATUS])}>{STATUS}</div>
       </div>
     </div>
   );

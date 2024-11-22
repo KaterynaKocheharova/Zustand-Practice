@@ -20,3 +20,15 @@
   padding: 0.25rem;
   border-radius: 4px;
 }
+
+.PLANNED {
+  background-color: var(--color-planned);
+}
+
+.ONGOING {
+  background-color: var(--color-ongoing);
+}
+
+.DONE {
+  background-color: var(--color-done);
+}
