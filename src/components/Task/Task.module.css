@@ -1,0 +1,22 @@
+.task {
+  background-color: white;
+  border-radius: 4px;
+  min-height: 5rem;
+  padding: 0.5rem;
+  color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  font-size: small;
+  background-color: var(--color-gray-light);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
