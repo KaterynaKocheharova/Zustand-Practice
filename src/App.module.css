@@ -1,0 +1,8 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--color-gray);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}

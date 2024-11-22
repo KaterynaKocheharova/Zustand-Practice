@@ -1,3 +1,12 @@
+:root {
+  --color-gray: #6b6b6b;
+  --color-gray-light: #d6d6d6;
+  --color-gray-dark: #3a3a3a;
+  --color-ongoing: #ffcc66;
+  --color-done: #66cc66;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -27,3 +36,4 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
