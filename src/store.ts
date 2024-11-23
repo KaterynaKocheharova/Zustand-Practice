@@ -1,7 +1,21 @@
 import { create } from "zustand";
 
-const store = (set) => ({
-  tasks: [{ title: "Test task", status: "PLANNED" }],
-});
+type CounterStore = {
+  count: number;
+  increment: () => void;
+  decrement: () => void;
+};
 
-export const useStore = create(store);
+export const useCounterStore = create<CounterStore>((set) => ({
+  count: 0,
+  increment: () => {
+    set((state) => ({
+      count: state.count + 1,
+    }));
+  },
+  decrement: () => {
+    set((state) => ({
+      count: state.count - 1,
+    }));
+  },
+}));
