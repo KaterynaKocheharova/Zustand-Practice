@@ -1,13 +1,12 @@
 import css from "./App.module.css";
-import Counter from "./components/Counter/Counter";
+import Column from "./components/Column/Column";
 
 export default function App() {
   return (
     <div id="App" className={css.app}>
-      <Counter />
-      {/* <Column state="planned" />
+      <Column state="planned" />
       <Column state="ongoing" />
-      <Column state="done" /> */}
+      <Column state="done" />
     </div>
   );
 }

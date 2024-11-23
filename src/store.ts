@@ -1,5 +1,7 @@
 import { create } from "zustand";
 
+// ======================================== COUNTER STORE
+
 type CounterStore = {
   count: number;
   increment: () => void;
@@ -29,7 +31,18 @@ export const useCounterStore = create<CounterStore>((set) => ({
   },
 }));
 
-
 // BEST PRACTICES
 // 1. get only a part of the state in components
 // 2. group useStore custom hooks by functions
+
+// ============================================== TASKS STORE
+
+export type Status = "planned" | "ongoing" | "done";
+
+export type TasksStore = {
+  tasks: { title: string; status: Status }[];
+};
+
+export const useTasksStore = create<TasksStore>((set) => ({
+  tasks: [{ title: "to do", status: "planned" }],
+}));
