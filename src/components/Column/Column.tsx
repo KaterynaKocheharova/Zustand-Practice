@@ -1,3 +1,4 @@
+import { useStore } from "../../store";
 import Task from "../Task/Task";
 import css from "./Column.module.css";
 
@@ -7,11 +8,15 @@ const STATUS = {
   DONE: "done",
 };
 
+type StatusKeys = keyof typeof STATUS;
+
 type ColumnProps = {
-  state: keyof typeof STATUS;
+  state: StatusKeys;
 };
 
 const Column = ({ state }: ColumnProps) => {
+  const tasks = useStore((state) => state.tasks);
+  console.log(tasks)
   return (
     <div className={css.column}>
       <p>{state}</p>
