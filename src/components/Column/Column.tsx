@@ -16,9 +16,15 @@ const Column = ({ state }: ColumnProps) => {
 
   return (
     <div className={css.column}>
-      <p>{state}</p>
-      {filtered.map((task, index) => {
-        return <Task key={index} title={task.title} status={task.status} />;
+      <div className={css.top}>
+        <button>Add</button>
+        <p>{state}</p>
+      </div>
+
+      {filtered.map((task) => {
+        return (
+          <Task key={task.title} title={task.title} status={task.status} />
+        );
       })}
     </div>
   );

@@ -21,14 +21,14 @@
   border-radius: 4px;
 }
 
-.PLANNED {
+.planned {
   background-color: var(--color-planned);
 }
 
-.ONGOING {
+.ongoing {
   background-color: var(--color-ongoing);
 }
 
-.DONE {
+.done {
   background-color: var(--color-done);
 }

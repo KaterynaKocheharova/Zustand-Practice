@@ -5,3 +5,8 @@
   width: 33%;
   max-width: 20rem;
 }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
