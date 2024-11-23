@@ -28,3 +28,8 @@ export const useCounterStore = create<CounterStore>((set) => ({
     }));
   },
 }));
+
+
+// BEST PRACTICES
+// 1. get only a part of the state in components
+// 2. group useStore custom hooks by functions
