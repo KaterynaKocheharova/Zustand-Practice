@@ -41,8 +41,11 @@ export type Status = "planned" | "ongoing" | "done";
 
 export type TasksStore = {
   tasks: { title: string; status: Status }[];
+  addTask: (title: string, state: Status) => void;
 };
 
 export const useTasksStore = create<TasksStore>((set) => ({
   tasks: [{ title: "to do", status: "planned" }],
+  addTask: (title, state) =>
+    set((store) => ({ tasks: [...store.tasks, { title, status: state }] })),
 }));

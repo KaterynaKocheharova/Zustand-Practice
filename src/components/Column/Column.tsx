@@ -14,10 +14,12 @@ const Column = ({ state }: ColumnProps) => {
     [tasks, state]
   );
 
+  const addTask = useTasksStore((store) => store.addTask);
+
   return (
     <div className={css.column}>
       <div className={css.top}>
-        <button>Add</button>
+        <button onClick={() => addTask("shopping", state)}>Add</button>
         <p>{state}</p>
       </div>
 
